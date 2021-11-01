@@ -1,0 +1,164 @@
+.NavigationMenu {
+  width: 250px;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  transition: width 0.1s cubic-bezier(.4,0,1,1);
+}
+.menu-compact{
+ width: 70px;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  transition: width 0.1s cubic-bezier(.4,0,1,1);
+}
+.Company{
+  display: flex;
+  
+  flex-grow: initial;
+  padding: 8px 0;
+  height: 64px;
+  border-bottom: rgba(250, 250, 250, 0.1) 1px solid;
+  align-items: center;
+  
+  
+}
+
+.nav-toggle{
+    background-color:#263238;    
+    display: flex;
+    cursor: pointer;
+    min-height: 30px;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 80%;
+    position: absolute;
+
+    transition: opacity 0.1s cubic-bezier(.4,0,1,1);
+    transform: rotateX(180deg);
+   
+    
+}
+.nav-toggle-compact{
+    
+    display: flex;
+    cursor: pointer;
+    background-color: #263238;
+    min-height: 30px;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 20%;
+    transform: rotate(180deg);
+   
+    
+}
+.nav-toggle:hover{
+    filter: brightness(1.2);
+}
+.nav-toggle-compact:hover{
+    filter: brightness(1.2);
+}
+.icons-exp{
+    
+    color: white;
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transform: rotate(180deg);
+   
+
+    
+    
+}
+.Cname {
+  padding: 16px 16px;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  color: white;
+  white-space: nowrap;
+}
+.navlink-group {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-bottom: rgba(250, 250, 250, 0.1) 1px solid;
+}
+
+.icons {
+  min-height: 25px;
+  min-width: 25px;
+  font-size: 16px;
+
+  color: white;
+}
+.span-expand {
+  padding-left: 34px;
+  font-size: 13px;
+  white-space: nowrap;
+  visibility: visible;
+  font-family: Roboto, sans-serif;
+  color: white;
+  transition: visiblity 0.3s cubic-bezier(.4,0,1,1);
+}
+.span-compact{
+visibility: hidden;
+}
+.link {
+  padding-left: 16px;
+  padding-right: 16px;
+  min-height: 49px;
+  display: flex;
+  align-items: center;
+  transition: filter 300ms;
+  background-color: #263238;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link:hover {
+  filter: brightness(1.2);
+}
+.link:hover > .icons,.link:hover >.span-expand{
+    color:green;
+}
+
+/*.link:focus,.link:focus > .icons,.link:focus > .span-expand{
+    filter: brightness(1.2);
+    color: #e64a19;
+}*/
+.Tooltip{
+    background-color: #263238;
+    color: white;
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 0;
+    width: max-content;
+    min-height: 35px;
+    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    font-family: Roboto,sans-serif;
+    justify-content: center;
+    font-size: 13px;
+}
+.icons:hover +.Tooltip{
+    opacity: 1;
+    pointer-events: auto;    
+}
+
+.menu-compact.navlink-group.icons:hover.Tooltip{
+    opacity:1;
+}
