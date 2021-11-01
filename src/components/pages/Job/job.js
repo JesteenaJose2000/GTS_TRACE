@@ -214,10 +214,7 @@ const items = tableData.filter((data)=>{
 
 <div  className= "table-size">
     
-      
-    <Container>
-     
-      <Subheader>
+  <div className= "subheader">
            
       <h1 style={{"color": "black"}}>Jobs </h1><span>&nbsp;&nbsp;</span>
       
@@ -281,7 +278,7 @@ const items = tableData.filter((data)=>{
 {/*--------------------------------------------Add job section----------------------*/}    
 <Addjob/> 
                     
-</Subheader>
+</div>
 
 
 {/* --------------------------------------------table displaying-------------------------------------------------------------------- */}
@@ -327,8 +324,7 @@ const items = tableData.filter((data)=>{
       
   </Table>
   
-  
- </Container> 
+ 
 
 </div>
 

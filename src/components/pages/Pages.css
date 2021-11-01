@@ -10,7 +10,12 @@ body{
   width: 200px;
   height: 40px;
 }
-
+.subheader{
+  flex-direction: row;
+  display: flex;
+  padding-top:  10px;
+  align-items: center;
+}
  .custom_select:before{
   content: "";
   position: absolute;
@@ -25,10 +30,10 @@ body{
    padding: 0px; 
 }
 .table-size{
-    
-  width: 90%;
+  margin-left: 20px;  
+  width: 95%;
     padding-left: 8px;
-    margin-right: 8px;
+    margin-right: 3px;
 }
 
 

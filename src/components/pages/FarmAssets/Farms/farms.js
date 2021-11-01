@@ -29,16 +29,16 @@ export default function Farms() {
      
       <Subheader>
            
-      <h1 style={{"color": "black"}}>Farms </h1><span>&nbsp;&nbsp;</span>
+        <h1 style={{"color": "black"}}>Farms </h1><span>&nbsp;&nbsp;</span>
       
       
    {/*--------------------------------------------Add edit delete farm popup----------------------*/}
-      <Farmpopup/>
+        <Farmpopup/>
       
 
-      <div className="spacer"></div>
-    </Subheader>
- </Container> 
+        <div className="spacer"></div>
+      </Subheader>
+    </Container> 
 
 
 
