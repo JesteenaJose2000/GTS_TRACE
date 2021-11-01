@@ -216,7 +216,7 @@ const items = tableData.filter((data)=>{
     
   <div className= "subheader">
            
-      <h1 style={{"color": "black"}}>Jobs </h1><span>&nbsp;&nbsp;</span>
+      <h1 style={{"color": "black", "margin-bottom":"0px"}}>Jobs </h1><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
       
       
    {/*--------------------------------------------Completed jobs popup----------------------*/}
