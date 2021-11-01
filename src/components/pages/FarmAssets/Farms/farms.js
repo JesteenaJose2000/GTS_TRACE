@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 //import HeaderSection from "../../components/Header/header";
 //import Footer from "../../components/Footer/footer";
-import SearchIcon from 'mdi-react/SearchIcon';
-
-import Subheader from '../../../components/Subheader/subheader';
+import FarmTable from './farmTable';
 import Farmpopup from './FarmListPopup/farmpopup';
 import '../../Pages.css';
 
@@ -22,25 +20,24 @@ export default function Farms() {
    
   return(
 
-
+<div  className= "table-size">
     
-      
-    <Container>
-     
-      <Subheader>
-           
+    <div className= "subheader">  
+   
         <h1 style={{"color": "black"}}>Farms </h1><span>&nbsp;&nbsp;</span>
       
       
    {/*--------------------------------------------Add edit delete farm popup----------------------*/}
-        <Farmpopup/>
-      
+       <div className="icon-align">
+          <Farmpopup/>
+      </div>  
 
-        <div className="spacer"></div>
-      </Subheader>
-    </Container> 
-
-
+      <div className="spacer"></div>
+    
+    </div>
+     {/*------------------------------------Farm Tables Paddock, silos, fuel tanks----------------------*/}
+    <FarmTable/>
+</div>
 
       );
 }

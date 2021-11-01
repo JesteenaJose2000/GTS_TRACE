@@ -5,6 +5,7 @@ import Routing from "./Routing";
 import Layout from "./components/layout";
 import Dashboard from "./components/pages/Dashboard";
 import Jobs from "./components/pages/Job/job";
+import Farms from "./components/pages/FarmAssets/Farms/farms";
 import CustomReports from "./components/pages/CustomReports";
 import Calender from "./components/pages/Calender";
 import Activityreports from "./components/pages/Activities/Activityreports";
@@ -27,6 +28,7 @@ class App extends Component {
               <Dashboard/> 
             </Route>
             <Route path="/Jobs" exact component={Jobs}></Route>
+            <Route path="/Farms" exact component={Farms}></Route>
             <Route path="/Customreports" exact component={CustomReports}></Route>
             <Route path="/Calender" exact component={Calender}></Route>
             <Route path="/Activityreports" exact component={Activityreports}></Route>

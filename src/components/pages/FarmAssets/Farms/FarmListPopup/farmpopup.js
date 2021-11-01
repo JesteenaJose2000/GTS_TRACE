@@ -1,60 +1,148 @@
-import React from 'react'
-import { Button, Icon, Modal } from 'semantic-ui-react'
+import React, {useState} from 'react'
+import { Button, Checkbox, Icon, Grid, Modal, Input } from 'semantic-ui-react'
 import GearIcon from 'mdi-react/GearIcon';
+
 export default function Farmpopup() {
   const [firstOpen, setFirstOpen] = React.useState(false)
-  const [secondOpen, setSecondOpen] = React.useState(false)
-
+  const [addOpen, setAddOpen] = React.useState(false)
+  const [editOpen, setEditOpen] = React.useState(false)
+  const [deleteOpen, setDeleteOpen] = React.useState(false)
+  const [state, setState] = useState("Myfarm"); 
+   
   return (
     <>
      
       <GearIcon onClick={() => setFirstOpen(true)} style={{"cursor":"pointer", "color": "black"}}/>
-      <Modal
+      <Modal style={{ "height": "35%", "width": "25%", "background-color": "rgb(0 0 0 / 62%)" }}
         onClose={() => setFirstOpen(false)}
         onOpen={() => setFirstOpen(true)}
         open={firstOpen}
       >
-        <Modal.Header>Modal #1</Modal.Header>
-        <Modal.Content image>
-          <div className='image'>
-            <Icon name='right arrow' />
-          </div>
+        <Modal.Header>Farm Options</Modal.Header>
+        <Modal.Content>
+        <div  style={{"margin-left":"35px"}}>
           <Modal.Description>
-            <p>We have more to share with you. Follow us along to modal 2</p>
-          </Modal.Description>
-        </Modal.Content>
-        <Modal.Actions>
-          <Button onClick={() => setSecondOpen(true)} primary>
-            Proceed <Icon name='right chevron' />
+          <Button basic color='green' onClick={() => setAddOpen(true)}>
+          <Icon name='plus' />
+            Add Farm 
           </Button>
+          
+          </Modal.Description>
+         
+         
+          <Modal.Description style={{"margin-top":"10px"}}>
+          <Button basic color='blue' onClick={() => setEditOpen(true)}>
+          <Icon name='pencil' />
+            Edit Farm
+          </Button>
+          
+          </Modal.Description>
+         
+         
+          <Modal.Description style={{"margin-top":"10px"}}>
+          <Button basic color='red' onClick={() => setDeleteOpen(true)
+          }>
+          <Icon name='minus' />
+            Delete Farm
+          </Button>
+          
+          </Modal.Description>
+         </div>
+        </Modal.Content>
+        
+        <Modal.Actions>
+        <Button color='red' onClick={() => setFirstOpen(false)}>
+          <Icon name='remove'  /> Close
+        </Button>
+          
         </Modal.Actions>
-
-        <Modal
-          onClose={() => setSecondOpen(false)}
-          open={secondOpen}
+            
+      <Modal
+          onClose={() => setAddOpen(false)}
+          open={addOpen}
           size='small'
+          style={{ "height": "35%", "width": "35%" }}
         >
-          <Modal.Header>Modal #2</Modal.Header>
+          <Modal.Header>New Item</Modal.Header>
           <Modal.Content>
-            <p>That's everything!</p>
+          <Input fluid iconPosition='left' placeholder='Name'>
+              
+          <input />
+    </Input>
+   
           </Modal.Content>
           <Modal.Actions>
-            <Button
+          <Button
+              icon='close'
+              content='Cancel'
+              onClick={() => setAddOpen(false)}
+            />
+            <Button positive
               icon='check'
-              content='All Done'
-              onClick={() => setSecondOpen(false)}
+              content='Save'
+              onClick={() => setAddOpen(false)}
             />
           </Modal.Actions>
         </Modal>
+        
+      <Modal
+          onClose={() => setEditOpen(false)}
+          open={editOpen}
+          size='small'
+          style={{ "height": "35%", "width": "35%" }}
+        >
+          <Modal.Header>Edit</Modal.Header>
+          <Modal.Content>
+          <Input fluid iconPosition='left'>
+              
+          <input value={state} onChange={(e) => setState(e.target.value)} />
+    </Input>
+    
+          </Modal.Content>
+          <Modal.Actions>
+          <Button
+              icon='close'
+              content='Cancel'
+              onClick={() => setEditOpen(false)}
+            />
+            <Button positive
+              icon='check'
+              content='Save'
+              onClick={() => setEditOpen(false)}
+            />
+          </Modal.Actions>
+        </Modal>
+        
+      <Modal
+          onClose={() => setDeleteOpen(false)}
+          open={deleteOpen}
+          size='small'
+          style={{ "height": "35%", "width": "25%" }}
+        >
+          <Modal.Header>Delete</Modal.Header>
+          <Modal.Content>
+            <p>Are you sure you want to delete the farm?</p>
+          </Modal.Content>
+          <Modal.Actions>
+            <Button  onClick={() => setDeleteOpen(false)} color="white"
+             icon='close' 
+             content='Cancel'
+             />
+            <Button onClick={() => setDeleteOpen(false)} negative
+           
+             content='Delete'
+             />
+          </Modal.Actions>
+          
+          
+        </Modal>
+        
       </Modal>
     </>
   )
 }
 
-export default ModalExampleMultiple
 
-import React from 'react'
-import { Button, Checkbox, Grid, Modal } from 'semantic-ui-react'
 
 function exampleReducer(state, action) {
   switch (action.type) {
@@ -127,4 +215,3 @@ function ModalExampleCloseConfig() {
   )
 }
 
-export default ModalExampleCloseConfig

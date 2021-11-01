@@ -50,7 +50,7 @@ function Navbar() {
   return (
     <div className={menu_class}>
       <div className="Company">
-        {!compact && <div className="Cname">Farm Simple</div>}
+        {!compact && <div className="Cname">GTS Trace</div>}
         <div
           className={toogle_navbar}
           onClick={() => {

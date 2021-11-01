@@ -1,25 +1,12 @@
 import React, { useState } from 'react';
-//import HeaderSection from "../../components/Header/header";
-//import Footer from "../../components/Footer/footer";
-import SearchIcon from 'mdi-react/SearchIcon';
 import GearIcon from 'mdi-react/GearIcon';
-import Subheader from '../../../components/Subheader/subheader';
-import IconDisplay from '../../../functions/icondisplay';
-//import Addjob from './addjob';
+import IconDisplay from './icondisplay';
 import Editjob from './JobEdit/JobPopUp/JobMain';
 import Addjob from './NewJob/JobPopUp/JobMain';
-//import Editjob from './editjob';
-
 import '../Pages.css';
-
 import tableData from '../../../Data/tableData.json';
-import {Container} from 'semantic-ui-react';
-
 import { Icon, Label, Menu, Table, Modal, Header, Button, Checkbox, Grid  } from 'semantic-ui-react';
 import _ from 'lodash';
-
-
-
 
 export default function Job() {
   
