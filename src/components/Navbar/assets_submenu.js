@@ -10,7 +10,7 @@ export default function assets_submenu(props) {
   let sub_menu_class=!props.compact?"assets-menu":"assets-menu-compact";
   return (
     <div className={sub_menu_class}>
-        <Link to="/" className="link">
+        <Link to="/Farms" className="link">
           <GiField className="icons" />
           <span className="span-expand">Farms</span>
         </Link>

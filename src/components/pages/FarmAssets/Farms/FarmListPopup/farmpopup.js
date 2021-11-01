@@ -1,14 +1,14 @@
 import React from 'react'
 import { Button, Icon, Modal } from 'semantic-ui-react'
-
-function ModalExampleMultiple() {
+import GearIcon from 'mdi-react/GearIcon';
+export default function Farmpopup() {
   const [firstOpen, setFirstOpen] = React.useState(false)
   const [secondOpen, setSecondOpen] = React.useState(false)
 
   return (
     <>
-      <Button onClick={() => setFirstOpen(true)}>Open first Modal</Button>
-
+     
+      <GearIcon onClick={() => setFirstOpen(true)} style={{"cursor":"pointer", "color": "black"}}/>
       <Modal
         onClose={() => setFirstOpen(false)}
         onOpen={() => setFirstOpen(true)}
