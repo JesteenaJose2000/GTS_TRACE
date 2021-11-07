@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import FarmTable from './farmTable';
 import Farmpopup from './FarmListPopup/farmpopup';
 import '../../Pages.css';
-
+import farm from "../../../../Data/farmData";
 //import tableData from '../../../Data/tableData.json';
 import {Container} from 'semantic-ui-react';
 
@@ -15,6 +15,48 @@ import { Icon, Label, Menu, Table, Modal, Header, Button, Checkbox, Grid  } from
 
 
 export default function Farms() {
+
+  const [selectFarm, setselectFarm] = useState('');
+
+  let options= null;
+  function FarmDropdown() {
+   
+          
+              options = farm.map((el) => <option value={el.value} key={el.value}>{el.value}</option>
+                        );
+          
+     if(selectFarm===" ")
+     {
+      return (<>
+                            
+        <div class="inputfield">
+            <div class="custom_select"> 
+            <select >            
+            <option>No data available</option>
+                </select>
+            </div>
+        </div>
+        </>
+        )
+     }
+     else{
+              return (<>
+                            
+                  <div class="inputfield">
+                      <div class="custom_select"> 
+                      <select value={selectFarm} onChange={(e) => setselectFarm(e.target.value)}>            
+                          {options}
+                          </select>
+                      </div>
+                  </div>
+                  </>
+                  )
+          }
+  
+  
+          
+  }
+  
   
  
    
@@ -31,7 +73,9 @@ export default function Farms() {
        <div className="icon-align">
           <Farmpopup/>
       </div>  
-
+      <Grid.Column style={{"margin-left": "10px"}}>
+         <FarmDropdown/>
+      </Grid.Column>
       <div className="spacer"></div>
     
     </div>
