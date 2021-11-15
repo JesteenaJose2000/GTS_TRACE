@@ -67,11 +67,12 @@ export default function Farms() {
     <div className= "subheader">  
    
         <h1 style={{"color": "black"}}>Farms </h1><span>&nbsp;&nbsp;</span>
-      
+        
       
    {/*--------------------------------------------Add edit delete farm popup----------------------*/}
        <div className="icon-align">
-          <Farmpopup/>
+           
+          <Farmpopup Value={selectFarm}/>
       </div>  
       <Grid.Column style={{"margin-left": "10px"}}>
          <FarmDropdown/>

@@ -1,14 +1,26 @@
 import React, {useState} from 'react'
 import { Button, Checkbox, Icon, Grid, Modal, Input } from 'semantic-ui-react'
 import GearIcon from 'mdi-react/GearIcon';
+import farm from "../../../../../Data/farmData";
 
-export default function Farmpopup() {
+export default function Farmpopup(props) {
+  const Value = props.Value;
   const [firstOpen, setFirstOpen] = React.useState(false)
   const [addOpen, setAddOpen] = React.useState(false)
   const [editOpen, setEditOpen] = React.useState(false)
   const [deleteOpen, setDeleteOpen] = React.useState(false)
-  const [state, setState] = useState("Myfarm"); 
-   
+  const [state, setState] = useState(' '); 
+  
+  const [farm,setfarm]=useState([
+    {value:"Farm1"},
+    {value:"Farm2"},
+    
+])
+const addRow=()=>{
+  let newFarm={value:{state}}
+  setfarm([...farm,newFarm])
+  alert("new farm added");
+}
   return (
     <>
      
@@ -22,6 +34,7 @@ export default function Farmpopup() {
         <Modal.Content>
         <div  style={{"margin-left":"35px"}}>
           <Modal.Description>
+          
           <Button basic color='green' onClick={() => setAddOpen(true)}>
           <Icon name='plus' />
             Add Farm 
@@ -31,7 +44,8 @@ export default function Farmpopup() {
          
          
           <Modal.Description style={{"margin-top":"10px"}}>
-          <Button basic color='blue' onClick={() => setEditOpen(true)}>
+          <Button basic color='blue' onClick={() => {setEditOpen(true);
+        setState(Value);}}>
           <Icon name='pencil' />
             Edit Farm
           </Button>
@@ -67,7 +81,8 @@ export default function Farmpopup() {
           <Modal.Content>
           <Input fluid iconPosition='left' placeholder='Name'>
               
-          <input />
+          <input onChange={(e) => setState(e.target.value)
+          } />
     </Input>
    
           </Modal.Content>
@@ -80,7 +95,8 @@ export default function Farmpopup() {
             <Button positive
               icon='check'
               content='Save'
-              onClick={() => setAddOpen(false)}
+              onClick={() => {setAddOpen(false);
+              addRow();}}
             />
           </Modal.Actions>
         </Modal>
