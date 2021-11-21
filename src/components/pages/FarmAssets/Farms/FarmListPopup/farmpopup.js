@@ -19,7 +19,15 @@ export default function Farmpopup(props) {
 const addRow=()=>{
   let newFarm={value:{state}}
   setfarm([...farm,newFarm])
-  alert("new farm added");
+  alert("New farm added");
+}
+const editRow=()=>{
+ 
+  alert("Farm edited");
+}
+const deleteRow=()=>{
+ 
+  alert("Farm deleted");
 }
   return (
     <>
@@ -66,7 +74,7 @@ const addRow=()=>{
         
         <Modal.Actions>
         <Button color='red' onClick={() => setFirstOpen(false)}>
-          <Icon name='remove'  /> Close
+          <Icon name='remove'  /> Cancel
         </Button>
           
         </Modal.Actions>
@@ -124,7 +132,7 @@ const addRow=()=>{
             <Button positive
               icon='check'
               content='Save'
-              onClick={() => setEditOpen(false)}
+              onClick={() => {setEditOpen(false); editRow();}}
             />
           </Modal.Actions>
         </Modal>
@@ -137,14 +145,16 @@ const addRow=()=>{
         >
           <Modal.Header>Delete</Modal.Header>
           <Modal.Content>
-            <p>Are you sure you want to delete the farm?</p>
+            <p>Are you sure you want to delete the {state}?</p>
           </Modal.Content>
           <Modal.Actions>
             <Button  onClick={() => setDeleteOpen(false)} color="white"
              icon='close' 
              content='Cancel'
              />
-            <Button onClick={() => setDeleteOpen(false)} negative
+            <Button onClick={() => {setDeleteOpen(false);
+            deleteRow();}} 
+            negative
            
              content='Delete'
              />

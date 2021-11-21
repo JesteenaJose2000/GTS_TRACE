@@ -16,7 +16,7 @@ import { Icon, Label, Menu, Table, Modal, Header, Button, Checkbox, Grid  } from
 
 export default function Farms() {
 
-  const [selectFarm, setselectFarm] = useState('');
+  const [selectFarm, setselectFarm] = useState('Farm1');
 
   let options= null;
   function FarmDropdown() {
