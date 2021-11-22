@@ -6,6 +6,9 @@ import Layout from "./components/layout";
 import Dashboard from "./components/pages/Dashboard";
 import Jobs from "./components/pages/Job/job";
 import Farms from "./components/pages/FarmAssets/Farms/farms";
+import Fertiliser from "./components/pages/FarmAssets/Fertiliser/FertiliserTable";
+import Equipments from "./components/pages/FarmAssets/Equipments/Equipments";
+import Chemicals from "./components/pages/FarmAssets/Chemicals/Chemical";
 import CustomReports from "./components/pages/CustomReports";
 import Calender from "./components/pages/Calender";
 import Activityreports from "./components/pages/Activities/Activityreports";
@@ -29,6 +32,9 @@ class App extends Component {
             </Route>
             <Route path="/Jobs" exact component={Jobs}></Route>
             <Route path="/Farms" exact component={Farms}></Route>
+            <Route path="/Fertiliser" exact component={Fertiliser}></Route>
+            <Route path="/Equipments" exact component={Equipments}></Route>
+            <Route path="/Chemicals" exact component={Chemicals}></Route>
             <Route path="/Customreports" exact component={CustomReports}></Route>
             <Route path="/Calender" exact component={Calender}></Route>
             <Route path="/Activityreports" exact component={Activityreports}></Route>

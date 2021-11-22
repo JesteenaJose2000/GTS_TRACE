@@ -31,9 +31,9 @@ export default function FarmTable()  {
           
            
           </Menu>
-          <Segment attached='bottom'>
+          
          <TableDetails dataValue={state}/>
-        </Segment>
+      <br></br>
          
         </div>
     );

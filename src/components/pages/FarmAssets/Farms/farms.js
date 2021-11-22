@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-//import HeaderSection from "../../components/Header/header";
-//import Footer from "../../components/Footer/footer";
+
 import FarmTable from './farmTable';
 import Farmpopup from './FarmListPopup/farmpopup';
 import '../../Pages.css';
 import farm from "../../../../Data/farmData";
-//import tableData from '../../../Data/tableData.json';
-import {Container} from 'semantic-ui-react';
 
-import { Icon, Label, Menu, Table, Modal, Header, Button, Checkbox, Grid  } from 'semantic-ui-react';
+
+import { Grid  } from 'semantic-ui-react';
 //import _ from 'lodash';
 
 

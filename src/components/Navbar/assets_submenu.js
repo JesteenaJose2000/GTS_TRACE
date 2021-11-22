@@ -30,16 +30,16 @@ export default function assets_submenu(props) {
           <span className="span-expand">Livestock</span>
         </Link>
 
-        <Link to="/" className="link">
+        <Link to="/Equipments" className="link">
           <FaTools className="icons" />
-          <span className="span-expand">Equipment</span>
+          <span className="span-expand">Equipments</span>
         </Link>
 
-        <Link to="/" className="link">
+        <Link to="/Chemicals" className="link">
           <GiChemicalDrop className="icons" />
           <span className="span-expand">Chemicals</span>
         </Link>
-        <Link to="/" className="link">
+        <Link to="/Fertiliser" className="link">
           <GiFertilizerBag className="icons" />
           <span className="span-expand">Fertilisers</span>
         </Link>

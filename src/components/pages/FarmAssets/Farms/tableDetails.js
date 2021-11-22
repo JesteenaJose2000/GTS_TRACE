@@ -1,6 +1,7 @@
 import React from 'react';
-import {Icon} from 'semantic-ui-react';
 import PaddockTable from './PaddockTable';
+import FueltankTable from './FueltankTable';
+import SiloTable from './SiloTable';
 
 export default function TableDetails(props) {
   const dataValue = props.dataValue;
@@ -8,9 +9,9 @@ export default function TableDetails(props) {
     case 'PADDOCK':
             return <PaddockTable/>
     case 'FUEL TANKS':
-            return <Icon name='green circle' size='large'/>
+            return <FueltankTable/>
     case 'SILOS':
-            return <Icon name='blue circle'size='large'/>
+            return <SiloTable/>
     
      default:
          return( <></>  ) ;
