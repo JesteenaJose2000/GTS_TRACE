@@ -5,7 +5,7 @@ import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function SiloTable() {
-    const [open, setOpen] = React.useState(false);
+    
     
 
     const [data, setData] = React.useState([

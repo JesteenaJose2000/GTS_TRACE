@@ -5,7 +5,7 @@ import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function PaddockTable() {
-    const [open, setOpen] = React.useState(false);
+   
     
 
     const [data, setData] = React.useState([
@@ -29,7 +29,7 @@ export default function PaddockTable() {
   }, {
       title: 'Rotation', field: 'rotation',
       lookup: {'D': 'Dryland' ,'NR': 'Normal Rotation', 'DC': 'Double Crop', 'LF': 'Long Fallow', 
-      'SF': 'Short Fallow', 'I': 'Irrigated', 'SI': 'Semi-irrigated', 'D': 'Dryland', 'AP': 'After Pulse' },
+      'SF': 'Short Fallow', 'I': 'Irrigated', 'SI': 'Semi-irrigated', 'AP': 'After Pulse' },
   }, {
       title: 'Year', field: 'year', type: 'numeric'
   }]

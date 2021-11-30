@@ -5,8 +5,7 @@ import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function FueltankTable() {
-    const [open, setOpen] = React.useState(false);
-    
+  
 
     const [data, setData] = React.useState([
         { name: 'SR Fuel Tank', capacity: '23', unit:'L', type: 'diesel' },

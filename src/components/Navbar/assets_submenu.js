@@ -25,7 +25,7 @@ export default function assets_submenu(props) {
           <span className="span-expand">Cultivars</span>
         </Link>
 
-        <Link to="/" className="link">
+        <Link to="/Livestock" className="link">
           <GiGoat className="icons" />
           <span className="span-expand">Livestock</span>
         </Link>
@@ -47,11 +47,11 @@ export default function assets_submenu(props) {
           <FaUsers className="icons" />
           <span className="span-expand">Users</span>
         </Link>
-        <Link to="/" className="link">
+        <Link to="/Nozzles" className="link">
           <FaSprayCan className="icons" />
           <span className="span-expand">Nozzles</span>
         </Link>
-        <Link to="/" className="link">
+        <Link to="/WaterLicence" className="link">
           <MdVerified className="icons" />
           <span className="span-expand">Water Licences</span>
         </Link>

@@ -27,15 +27,6 @@ const HeaderStyle = styled.header`
   top:0;
 `;
 
-const Footer = styled.footer`
-  background-color: gainsboro;
-  height: 40px;
-  grid-column: 2/3;
-  grid-row: 3/4;
-  position: sticky;
-  bottom: 0;
-`;
-
 const Main = styled.main`
   grid-column: 2/3;
   grid-row: 2/2;

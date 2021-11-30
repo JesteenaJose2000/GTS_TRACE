@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Routing from "./Routing";
 import Layout from "./components/layout";
 import Dashboard from "./components/pages/Dashboard";
 import Jobs from "./components/pages/Job/job";
@@ -9,6 +8,9 @@ import Farms from "./components/pages/FarmAssets/Farms/farms";
 import Fertiliser from "./components/pages/FarmAssets/Fertiliser/FertiliserTable";
 import Equipments from "./components/pages/FarmAssets/Equipments/Equipments";
 import Chemicals from "./components/pages/FarmAssets/Chemicals/Chemical";
+import Livestock from "./components/pages/FarmAssets/Livestock/LiveStock";
+import WaterLicence from "./components/pages/FarmAssets/WaterLicence/WaterLicence";
+import Nozzles from "./components/pages/FarmAssets/Nozzles/Nozzles";
 import CustomReports from "./components/pages/CustomReports";
 import Calender from "./components/pages/Calender";
 import Activityreports from "./components/pages/Activities/Activityreports";
@@ -35,6 +37,9 @@ class App extends Component {
             <Route path="/Fertiliser" exact component={Fertiliser}></Route>
             <Route path="/Equipments" exact component={Equipments}></Route>
             <Route path="/Chemicals" exact component={Chemicals}></Route>
+            <Route path="/Nozzles" exact component={Nozzles}></Route>
+            <Route path="/Livestock" exact component={Livestock}></Route>
+            <Route path="/WaterLicence" exact component={WaterLicence}></Route>
             <Route path="/Customreports" exact component={CustomReports}></Route>
             <Route path="/Calender" exact component={Calender}></Route>
             <Route path="/Activityreports" exact component={Activityreports}></Route>
