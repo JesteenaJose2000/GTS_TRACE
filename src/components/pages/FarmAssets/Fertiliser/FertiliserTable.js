@@ -13,7 +13,7 @@ export default function FertiliserTable() {
     { name: 'wer', form: 1, inventory: 12, units: 3, nutrients: "klm", composition: "50%" },
   ])
   const columns = [{
-    title: 'Name', field: 'name',
+    title: 'Name', field: 'name' ,
   },
   {
     title: 'Form', field: 'form', lookup: { 0: 'Granular', 1: 'Powder', 2: 'Liquid', 3: 'Gas' }

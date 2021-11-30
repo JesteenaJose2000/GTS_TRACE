@@ -9,10 +9,10 @@ export default function PaddockTable() {
     
 
     const [data, setData] = React.useState([
-      { name: 'Linta Paddock', size: '23', unit:'ac', cultivar: 'fallow', rotation: 'NR', year: 2017 },
-      { name: 'K2K Paddock', size: '50', unit:'ac', cultivar: 'dfg', rotation: 'DC', year: 2019 },
-      { name: 'Harry Woods Paddock', size: '40', unit:'f2', cultivar: 'abc', rotation: 'LF', year: 2020 },
-      { name: 'Peter Dein Co.', size: '10', unit:'m2', cultivar: 'abc', rotation: 'SF', year: 2019 }
+      { name: 'Linta Paddock', size: '23', unit:1, cultivar: 'fallow', rotation: 'NR', year: 2017 },
+      { name: 'K2K Paddock', size: '50', unit:0, cultivar: 'dfg', rotation: 'DC', year: 2019 },
+      { name: 'Harry Woods Paddock', size: '40', unit:1, cultivar: 'abc', rotation: 'LF', year: 2020 },
+      { name: 'Peter Dein Co.', size: '10', unit:2, cultivar: 'abc', rotation: 'SF', year: 2019 }
        ])
   const columns = [{
       title: 'Name', field: 'name'
@@ -21,8 +21,8 @@ export default function PaddockTable() {
       title: 'Size', field: 'size', type: 'numeric'
   },
   {
-      title: 'Unit', field: 'unit',
-      lookup: { 'ac': 'acres', 'ha': 'hectare', 'm2':'metre square', 'f2':'feet square'},
+      title: 'Unit', field: 'unit', 
+      lookup: { 0:'feet square', 1:'metre square',2: 'acres', 3: 'hectare'},
   }, {
       title: 'Cultivar', field: 'cultivar', 
       lookup: { 'fallow': 'Fallow', 'abc': 'abc', 'dfg':'dfg' },
