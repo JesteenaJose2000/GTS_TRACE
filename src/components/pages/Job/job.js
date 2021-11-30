@@ -85,7 +85,7 @@ export default function Job() {
             checked={selected}
           />
         </div>
-        <div className="archived">Show Completed</div>
+        <div className="completed">Show Completed</div>
       </div>
 
       <div className="equipment-table">
