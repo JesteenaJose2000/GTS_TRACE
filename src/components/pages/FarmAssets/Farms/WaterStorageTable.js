@@ -9,10 +9,10 @@ export default function WaterStorageTable() {
     
 
     const [data, setData] = React.useState([
-      { name: 'xv', capacity: '23', cunit:'m3',surface: '10', sunit:'m2',depth: '23', dunit:'m3', slop: 'fallow', notes: 'N' },
-      { name: 'K2K', capacity: '50', cunit:'f3', surface: '23', sunit:'f2',depth: '23', dunit:'m3',slop: 'dfg', notes: 'C' },
-      { name: 'oiuy', capacity: '40', cunit:'kl', surface: '40', sunit:'m2',depth: '23', dunit:'m3',slop: 'abc', notes: 'T' },
-      { name: 'sdfgh', capacity: '10', cunit:'Ml', surface: '2', sunit:'ha',depth: '23', dunit:'m3',slop: 'abc', notes: 'TS' }
+      { name: 'xv', capacity: '23', cunit:'2',surface: '10', sunit:'1',depth: '23', dunit:'5', slop: 3, notes: 'xcvb' },
+      { name: 'K2K', capacity: '50', cunit:'3', surface: '23', sunit:'0',depth: '23', dunit:'4',slop: 2, notes: 'sdfgh' },
+      { name: 'oiuy', capacity: '40', cunit:'1', surface: '40', sunit:'3',depth: '23', dunit:'1',slop: 8, notes: 'cvbn' },
+      { name: 'sdfgh', capacity: '10', cunit:'4', surface: '2', sunit:'2',depth: '23', dunit:'3',slop: 7, notes: 'jhgfd' }
        ])
   const columns = [{
       title: 'Name', field: 'name'
@@ -22,25 +22,25 @@ export default function WaterStorageTable() {
   },
   {
       title: 'Unit', field: 'cunit',
-      lookup: { 'l': 'Litres', 'kl': 'Kilolitres', 'Ml': 'Megalitres', 'G': 'Gallons', 'm3':'Cubic metre', 'f3':'Cubic feet','y3':'Cubic yard'},
+      lookup: { '0': 'Litres',  '1': 'Gallons', '4':'Cubic metre', '2':'Cubic feet','3':'Cubic yard'},
   },{
     title: 'Surface Area', field: 'surface', type: 'numeric',
 },
 {
     title: 'Unit', field: 'sunit',
-    lookup: { 'ha': 'Hectares', 'ac': 'Acres', 'm2':'Square metre', 'f2':'Square feet'},
+    lookup: { '3': 'Hectares', '2': 'Acres', '1':'Square metre', '0':'Square feet'},
 },{
   title: 'Max Depth ', field: 'depth', type: 'numeric',
   
 },
 {
   title: 'Unit', field: 'dunit',
-  lookup: { 'ha': 'Hectares', 'ac': 'Acres', 'm2':'Square metre', 'f2':'Square feet'},
+  lookup: { '0': 'mm', '1':'cm', '5':'metre', '2': 'inch', '3':'feet', '4':'yard'},
 }, {
-      title: 'slop', field: 'slop', type: 'numeric', 
+      title: 'Slop factor', field: 'slop', type: 'numeric', 
       
   }, {
-      title: 'notes', field: 'notes',
+      title: 'Notes', field: 'notes',
     
   }]
     return (
