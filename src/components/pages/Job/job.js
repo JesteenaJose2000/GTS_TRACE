@@ -48,6 +48,19 @@ export default function Job() {
 },
     { title: "Priority", field: "priority" ,
     lookup: { '0': 'Low', '1': 'Normal', '2': 'High', '3': 'Safety'},
+    render: rowData => {
+      switch (rowData.priority) {
+        case '0':
+          return <Icon name='angle down'size='large'/>
+   case '2':
+           return <Icon name='red angle double up'size='large'/>
+   case '1':
+           return <Icon name='blue angle up'size='large'/>
+   case '3':
+          return <Icon name='orange exclamation triangle'size='large'/>
+    default:
+      return <></>
+    }}
   },
     { title: "Description", field: "description" },
     { title: "Category", field: "category" ,
